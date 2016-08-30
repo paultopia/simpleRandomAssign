@@ -73,3 +73,5 @@ This is hillariously easier in clojure: it's as simple as:
 ;; => (:b 1 :e 2 :a 1 :d 2 :e 1 :b 2 :a 1 :c 2 :c 1 :d 2)
 
 ```
+
+bleh, ok, clojure isn't quite that magical, it was pointed out to me that this could easily reassign same thing to same student twice.  duh. late-night coding.
