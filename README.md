@@ -56,3 +56,20 @@ prints something pretty like (depending on random element):
 25  Bernstein v. Department of Justice        Shelley v. Kraemer
 26  Reynolds v. Sims                          Fisher v. University of Texas
 --  ----------------------------------------  ----------------------------------------
+
+
+# NOTE: 
+
+This is hillariously easier in clojure: it's as simple as: 
+
+
+```
+(defn randomassign [students cases numtimes] 
+(interleave (shuffle (apply concat (repeat numtimes students))) (cycle cases))
+;; where students is vector of students, cases is vector of cases, etc. 
+
+;; e.g. 
+(interleave (shuffle (apply concat (repeat 2 [:a :b :c :d :e]))) (cycle [1 2]))
+;; => (:b 1 :e 2 :a 1 :d 2 :e 1 :b 2 :a 1 :c 2 :c 1 :d 2)
+
+```
