@@ -65,7 +65,7 @@ This is hillariously easier in clojure: it's as simple as:
 
 ```
 (defn randomassign [students cases numtimes] 
-(interleave (shuffle (apply concat (repeat numtimes students))) (cycle cases))
+(interleave (shuffle (apply concat (repeat numtimes students))) (cycle cases)))
 ;; where students is vector of students, cases is vector of cases, etc. 
 
 ;; e.g. 
