@@ -21,7 +21,7 @@ Tinker v. Des Moines
 then just redirect the output to a file etc.
 
 ```
-pipenv run python select_students.py students.txt cases.txt > assignments.md
+python select_students.py students.txt cases.txt > assignments.md
 
 pandoc -o assignments.html assignments.md
 
